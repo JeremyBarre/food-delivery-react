@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import RestaurantsList from '../components/RestaurantList'
 import { getRestaurants } from '../services/Api'
 
 function Restaurants () {
@@ -23,7 +24,7 @@ function Restaurants () {
   return (
     <div>
       <h1>RESTAURANTS</h1>
-      <pre>{JSON.stringify(restaurants, null, 2)}</pre>
+      <RestaurantsList restaurants={restaurants} />
     </div>
   )
 }
