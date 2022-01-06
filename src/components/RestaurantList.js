@@ -6,13 +6,11 @@ function RestaurantsList (props) {
   // const restaurants = props.restaurants
   return (
     <div className='list_container'>
-      {
-        restaurants.map(restaurant => {
-          return (
-            <RestaurantsListItem key={restaurant._id} restaurant={restaurant} />
-          )
-        })
-      }
+      {restaurants.map(restaurant => {
+        return (
+          <RestaurantsListItem key={restaurant._id} restaurant={restaurant} />
+        )
+      })}
     </div>
   )
 }

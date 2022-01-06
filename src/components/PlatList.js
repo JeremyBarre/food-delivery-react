@@ -1,6 +1,17 @@
-function PlatList () {
+import PlatListItem from './PlatListItem'
+
+function PlatList (props) {
+  const { plats } = props
   return (
-    <h1>PlatList</h1>
+    <div className='list-container'>
+      {
+        plats.map(plat => {
+          return (
+            <PlatListItem key={plat._id} plat={plat} />
+          )
+        })
+      }
+    </div>
   )
 }
 

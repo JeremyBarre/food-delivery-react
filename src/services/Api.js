@@ -25,8 +25,17 @@ const getRestaurantById = async (id) => {
     console.error(error)
   }
 }
+const registerUser = async (userInfos) => {
+  try {
+    const response = await api.post('/auth/local/register', userInfos)
+    return response.data
+  } catch (error) {
+    console.error(error)
+  }
+}
 
 export {
   getRestaurants,
-  getRestaurantById
+  getRestaurantById,
+  registerUser
 }

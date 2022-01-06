@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import RestaurantInfos from '../components/RestaurantInfos'
 import { getRestaurantById } from '../services/Api'
 
 function Restaurant () {
@@ -22,8 +23,11 @@ function Restaurant () {
       <h1>En chargement !!!</h1>
     )
   }
-  return (
-    <pre>{JSON.stringify(restaurant, null, 2)}</pre>
+  return restaurant && (
+    <div>
+      <RestaurantInfos restaurant={restaurant} />
+    </div>
+
   )
 }
 
