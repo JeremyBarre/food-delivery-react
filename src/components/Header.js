@@ -14,6 +14,9 @@ function Header () {
           <li>
             <Link to='/auth'>Authentification</Link>
           </li>
+          <li>
+            <Link to='/counter'>Compteur</Link>
+          </li>
         </ul>
       </nav>
     </header>
